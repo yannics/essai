@@ -40,6 +40,21 @@
 %\setlength{\textwidth}{381pt} % Largeur de la zone de texte (17cm)
 \setcounter{secnumdepth}{0} 
 \usepackage[modulo]{lineno}
+%\linenumbers
+
+%%******************* added <<<<<<<<<<<<<<<
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{1.0ex}{3.5ex}} % add dots to TOC
+\def\addcontentsline#1#2#3{%
+    \addtocounter{linenumber}{-1} %  the line number of the section name
+    \addtocontents{#1}{\protect\contentsline{#2}{#3}{\thelinenumber}{}%
+   % \protected@file@percent
+    }
+    \stepcounter{linenumber} % back to right linenumber
+}
+\makeatother
+
+\renewcommand{\contentsname}{Contents~\hfill\textbf{Line}}
 \usepackage{enotez}
 % https://tex.stackexchange.com/questions/202805/refer-to-an-endnote-with-the-enotez-package-points-to-the-wrong-note
 \renewcommand{\footnote}{\endnote}
@@ -48,6 +63,10 @@
 }
 %\let\endnote=\endnote
 \newcommand{\eo}{\textsl{etou}}
+\usepackage{xcolor}
+\definecolor{DarkRed}{RGB}{139,0,0}
+\pagenumbering{gobble} 
+
 \begin{document}
 
 %\begin{minipage}{.033\textwidth}\includegraphics[width=\linewidth]{1123}\end{minipage}
@@ -75,7 +94,11 @@
  \end{titlepage}
 \makeatother
 
-%\tableofcontents
+\renewcommand{\contentsname}{Sommaire\\}
+
+{\color{DarkRed}\tableofcontents
+%\addtocontents{toc}{~\hfill\textbf{Ligne}\par}
+\noindent\hrulefill}
 
 \pagecolor{white}
 
@@ -92,11 +115,11 @@
   
 \section{Avertissement}
 
-Le but de cet essai est d'exposer et de contextualiser une pensée simple dont la mise à l'écrit s'est révélé d'une complexité déroutante. Aussi, je revendique un style d'écriture qui se veut concis et aussi précis que possible, à l'encontre d'une quelconque vulgarisation,  et qui requiert parfois l'utilisation d'une terminologie spécifique. En effet, il existe des mots, qui synthétisent, subsument, condensent et cristallisent des concepts, et qui révèlent un monde aussi complexe que fascinant, pour lesquels j'estime opportun d'en illustrer la pertinence. J'avoue prendre le risque de ne pas être lu ou compris, mais à l'heure où l'accessibilité du savoir est à la portée de tous -- ou presque --, j'invite le lecteur à rechercher, disséquer, au delà de mon propre propos, le sens de certain concepts, mots, peu ou pas développer à dessein, et de ne pas hésiter à déconstruire mon modeste édifice, usant pour les plus aventureux de la grammatologie déridienne.
+Le but de cet essai est d'exposer et de contextualiser une pensée simple dont la mise à l'écrit s'est révélé d'une complexité déroutante, tant une question en appelle une autre, et tant la réponse peut soulever des concepts inattendus, pluridisciplinaires, reliant parfois des savoirs disparates. Aussi, je revendique un style d'écriture qui se veut concis et aussi précis que possible, à l'encontre d'une quelconque vulgarisation,  et qui requiert parfois l'utilisation d'une terminologie spécifique. En effet, il existe des mots, qui synthétisent, subsument, condensent et cristallisent des concepts, et qui révèlent un monde aussi complexe que fascinant, pour lesquels j'estime opportun d'en illustrer la pertinence. J'avoue prendre le risque de ne pas être lu ou compris, mais à l'heure où l'accessibilité du savoir est à la portée de tous -- ou presque --, j'invite le lecteur à rechercher, disséquer, au delà de mon propre propos, le sens de certain concepts, mots, peu ou pas développer à dessein, et de ne pas hésiter à déconstruire mon modeste édifice, usant pour les plus aventureux de la grammatologie déridienne.
 
 \bigskip
 
-\section{...}
+\section{…}
 Suite à une longue reflexion au sujet d'accéder, de pratiquer, de créer et de partager le phénomène sonore en tant qu'objet musical, et à une expérience de vie dans laquelle je suis toujours en quête par ailleurs d'un ailleurs, 
 % et à cause d'une tendance misanthropique  
  je me propose d'exposer sous la forme d'un essai ma vision et mes espérances sur notre propre existence et notre propre ontologie, et ce à travers le prisme de l'expérience acoustique et musical. En effet, si il est devenu évident que la musique soit un produit de consommation courante, avec ceux qui la font et ceux qui la consomme, au regard de ceux qui la vive au sein d'une recherche introspective ou d'un rituel,
@@ -139,7 +162,7 @@ I believe that everybody can be part of musical practice in a playful way, for t
 %  
 %En effet, la musique permet un developpement cognitif significatif créant un lien social fort et permet aussi pour chacun de bénéficier de ses nombreuses vertus thérapeutiques.
 Indeed, music allows significant cognitive development creating a strong social bond and also allows everyone to benefit from its many
-therapeutic virtues on the body and mind}\endnote{...}.
+therapeutic virtues on the body and mind}\endnote{La pratique de la musique est un vecteur de plasticité anatomique et fonctionnelle en termes de registres perceptif, cognitif (mémoire et langage), émotionnel et moteur, impliquant le réseau neuronal dans son entièreté et ses répercussions sur l'ensemble du corps.}.
 
  
 %Indeed, music allows a significant cognitive development creating a strong social bond and also allows for everyone to benefit from its recognised therapeutic virtues. 
@@ -155,9 +178,9 @@ therapeutic virtues on the body and mind}\endnote{...}.
 %The `ultimate' aim is to raise awareness of another way to think and to practice music, and by this way stimulate our own creativity and fantasy. I believe that everybody can be part of musical practice in a playful way, for the benefit of a significant cognitive development at both the individual and the community level.
 
 \textit{Beforehand, we mean to redefine music, historically and for this purpose as a collective work within a never-ending rhizomatic learning}\endnote{\textit{Le rhizomatic learning} est un modèle où la recherche d'un résultat est effectuée par les participants de manière dynamique en fonction du contexte. Il met l'accent sur l'interconnexion des compétences de chacun par consensus.\\ \indent Le terme rhizome est attribué à Gilles Deleuze et Félix Guattari évoqué dans \textit{Mille plateaux }  -- édité en 1980 -- dans lequel ils dévelopent l'idée d'une `structure organique' définie par les principes suivants : \begin{itemize}%[label=\textbullet]
-\item « \textit{principe de connexion et d'hétérogénéité} [...] \textit{n'importe quel point d'un rhizome peut être connecté à un autre, et doit l'être} »
-\item « \textit{principe de multiplicité} [...] \textit{l'organisation propre du multiple en tant que tel, qui n'a nullement besoin de l'unité pour former un système} »
-\item « \textit{principe de rupture assignifiante}  [...]  \textit{un rhizome peut être rompu, brisé en un endroit quelconque} »
+\item « \textit{principe de connexion et d'hétérogénéité} [ … ] \textit{n'importe quel point d'un rhizome peut être connecté à un autre, et doit l'être} »
+\item « \textit{principe de multiplicité} [ … ] \textit{l'organisation propre du multiple en tant que tel, qui n'a nullement besoin de l'unité pour former un système} »
+\item « \textit{principe de rupture assignifiante}  [ … ]  \textit{un rhizome peut être rompu, brisé en un endroit quelconque} »
 \item « \textit{principe de cartographie et de décalcomanie} » (la carte est l'exploration de la structure, c'est à dire \textit{une expérimentation en prise sur le réel}, tandis que les calques sont les éléments structuraux et identifiés comme tels.)
 \end{itemize}
 %\\ -- « \textit{principe de connexion et d'hétérogénéité} [...] \textit{n'importe quel point d'un rhizome peut être connecté à un autre, et doit l'être} »\\ -- « \textit{principe de multiplicité} [...] \textit{l'organisation propre du multiple en tant que tel, qui n'a nullement besoin de l'unité pour former un système} »\\ -- « \textit{principe de rupture assignifiante}  [...]  \textit{un rhizome peut être rompu, brisé en un endroit quelconque} »\\ -- « \textit{principe de cartographie et de décalcomanie} » (la carte est l'exploration de la structure, c'est à dire \textit{une expérimentation en prise sur le réel}, tandis que les calques sont les éléments structuraux et identifiés comme tels.)
@@ -174,12 +197,13 @@ There is no need to retrace our steps or copying tribal lifestyles, but rather t
   
 \section{Contexte historique}
 
-D'un point de vue historique et formel, le fait musical fut décrit -- et l'est encore -- la plupart du temps dans un rapport  d'opposition paradigmatique en terme de discrimination social tel que la musique profane versus la musique sacré, la musique traditionnelle versus la musique savante, et la musique populaire versus la musique élitiste.
+D'un point de vue historique et formel, le fait musical fut décrit -- et l'est encore -- la plupart du temps dans un rapport  d'opposition paradigmatique en terme de discrimination sociale tel que la musique profane versus la musique sacré, la musique traditionnelle versus la musique savante, et la musique populaire versus la musique élitiste.
 %- musique profane versus musique sacré -- introduisant les notions de monophonie et de polyphonie;
 %- musique traditionnelle versus musique savante -- par extension danses et développement de la forme;
 %- musique populaire versus musique bruitiste -- comprenant l'industrie musicale et la conceptualisation de l'objet sonore.
+On pourrait ajouter, à partir du \textsc{xx}\ieme ~siècle, la musique `\textit{underground}' et de recherche versus la musique `\textit{mainstream}' dite aussi de masse. %diffusée en boucle dans les mass média et soutenue par les institutions en place.
 En fait d’opposition et d’un point de vue purement musicale, la disjonction
-de cette dualité paradigmatique est la plupart des cas beaucoup plus diffuse que ce que les
+de ces dualités paradigmatiques est la plupart des cas beaucoup plus diffuse que ce que les
 termes en eux-même pourraient laisser entendre. Cela dit, il s’agit bien du rôle
 que la musique tient dans la vie sociale qui en détermine véritablement sa nature,
 indépendamment de l’objet musical lui-même. Autrement dit, l’interprétation
@@ -188,24 +212,26 @@ musicale s’inscrit dans une démarche herméneutique\endnote{L'herméneutique 
 %Ces deux paradigmes s’inscrivent alors et aussi dans le temps en termes de synchronie et de diachronie. 
 \bigskip
 
-Dans un même ordre d'idée et d'un point de vue structurel, nous pouvons identifier trois paradigmes musicaux respectivement inclusifs tels que la musique de sons\endnote{Cette dénomination mérite d'être préciser. La musique de sons se référe présentement à l'objet sonore en tant que tel et plus spécifiquement à une ontologie du phénomène vibratoire compris comme un fait musical.}, la musique modale\endnote{La modalité est un système de construction scalaire permettant une variété de mélodie et de configurations motiviques dans son contexte culturel et compositionnel.  Autrement dit, la modalité est le résultat d’une selection de sons -- pour un instrument donné, notamment en fonction de sa facture et/ou de son intonation --  dans un contexte culturel donné, et qui constitue les `phonèmes' d’une phraséologie musicale codifiée.%    La période comprend la musique de la grèce antique – à partir de l'épitaphe de Seikilos – et les chants grégorien transcrit principalement en neumes. ...
+Dans un même ordre d'idée et d'un point de vue structurel, nous pouvons identifier trois paradigmes musicaux respectivement inclusifs tels que la musique de sons\endnote{La musique de sons se référe présentement à l'objet sonore en tant que tel et plus spécifiquement à une ontologie du phénomène vibratoire compris comme un fait musical.}, la musique modale\endnote{La modalité est un système de construction scalaire prédéterminé permettant une variété de mélodie et de configurations motiviques dans son contexte culturel et compositionnel.  Autrement dit, la modalité est le résultat d’une selection de sons -- pour un instrument donné, notamment en fonction de sa facture et/ou de son intonation --  dans un contexte culturel donné, et qui constitue les `phonèmes' d’une phraséologie musicale codifiée.%    La période comprend la musique de la grèce antique – à partir de l'épitaphe de Seikilos – et les chants grégorien transcrit principalement en neumes. ...
 } et la musique tonale\endnote{La tonalité est un cas particulier de la modalité dont la hiérarchisation des degrés crée des pôles d'attraction, notamment de la sensible vers la tonique, selon les deux modes diatoniques %heptatoniques 
-mineur et majeur -- le premier étant le relatif du second. Ainsi, la tonalité repose sur la dualité tension/détente, dissonance/consonance définit respectivement par la cadence du cinquième au premier degré du ton considéré.\\ \indent La tonalité est un compromis entre une volonté d’unifier les échelles modales selon les lois de l’acoustique -- i.e. relatif aux harmoniques du monocorde -- et d’universalisme, en passant par le temperament égal, et qui constitue encore de nos jours le standard tant en pratique qu’en théorie.% La majeur partie des musiques dites commerciales sont de nature tonale.%    reposant sur la dualité tension/détente ... tonique/dominante sensible etc ...
+mineur et majeur -- le premier étant le relatif du second. Ainsi, la tonalité repose sur la dualité tension/détente, dissonance/consonance définit respectivement par la cadence du cinquième au premier degré du ton considéré.\\ \indent La tonalité est un compromis entre une volonté d’unifier les échelles modales selon les lois de l’acoustique -- i.e. relatif aux harmoniques du monocorde pythagoricien -- et d’universalisme, en passant par le temperament égal, et qui constitue encore de nos jours le standard tant en pratique qu’en théorie.% La majeur partie des musiques dites commerciales sont de nature tonale.%    reposant sur la dualité tension/détente ... tonique/dominante sensible etc ...
 }, lesquelles s'articulent autour de trois périodes historiques. %La première articule la modalité vers la tonalité, par l
 
 La première articulation pourrait commencer par la découverte d'instruments préhistorique dont le caractère modal est avéré tel que les flûtes datant du paléolithique supérieur -- soit il y a environ 35\,000 ans\endnote{Il s'agit %pour les plus anciens artefacts -- datées au carbone 14 -- 
 de flûtes en os et en ivoire, découvertes en septembre 2008 dans la grotte de Hohle Fels, située dans le Jura Souabe à Bade-Wurtemberg en Allemagne.} --, ou bien aux premières traces de musiques écrites sous forme de textes accompagnés et/ou chantés, il y a 3\,400 ans pour les plus anciennes\endnote{Il s'agit de chants Hourrites accompagnés d'instructions pour instrument à neuf cordes, gravés sur tablette d'argile en écriture cunéiforme, découverts en 1950 dans l'ancienne cité d'Ougarit en Syrie.}.%, ou bien encore ... monocorde pythagore, epitaph de seikilos ...
 
-La deuxième articulation concerne l'émergence des tonalités majeure et mineure durant la Renaissance, incluant l'établissement du tempérament égal\endnote{Le tempérament égal divise l'octave en douze demi-tons égaux, permettant de moduler vers n'importe quelle tonalité; c'est un compromis à l'encontre de l'intonation juste. Le tempérament égal constitue depuis le socle normatif de la musique en général.} à la période Baroque. Le fait marquant fut le perfectionnement de l'imprimerie, notamment en Europe\endnote{Utilisant une technique d'impression dite de typographie à caractères mobiles, l'amélioration concerne le mode de fabrication de ces caractères mobiles en alliage de plomb, la presse à vis et l'encre grasse à base d'huile de lin, mise au point notamment par Gutenberg vers 1450.}, permettant l'édition et la diffusion de partitions et d'ouvrages théorique sur la musique, qui contribua largement à l'affirmation de la tonalité que connaitra l'ère classique, puis le romantisme du \textsc{xix}\ieme ~siècle, et en maintenant la modalité par la standardisation induite de la transcription musicale des œuvres du passé.
+La deuxième articulation concerne, à partir de la Renaissance, l'émergence de la tonalité en tant que système musical,  
+%des tonalités majeure et mineure 
+incluant l'établissement du tempérament égal\endnote{Le tempérament égal divise l'octave en douze demi-tons égaux, permettant de moduler vers n'importe quelle tonalité; c'est un compromis à l'encontre de l'intonation juste. Le tempérament égal constitue depuis le socle normatif de la musique en général.} à la période Baroque. Le fait marquant fut le perfectionnement de l'imprimerie, notamment en Europe\endnote{Utilisant une technique d'impression dite de typographie à caractères mobiles, l'amélioration concerne le mode de fabrication de ces caractères mobiles en alliage de plomb, la presse à vis et l'encre grasse à base d'huile de lin, mise au point notamment par Gutenberg vers 1450.}, permettant l'édition et la diffusion de partitions et d'ouvrages théorique sur la musique, qui contribua largement à l'affirmation de la tonalité que connaitra l'ère classique, puis le romantisme du \textsc{xix}\ieme ~siècle, tout en maintenant la modalité par la standardisation induite de la transcription musicale des œuvres du passé.
 
-Et enfin la troisième articulation couvrant largement le \textsc{xx}\ieme ~siècle va déconstruire\endnote{La déconstruction concerna l'art dans son ensemble depuis les origines, de l’art pariétal paléolithique au monochrome de Kasimir Malevich, du \textit{musilangage} au silence de John Cage, des Venus préhistoriques à l’urinoir de Marcel Duchamp; autrement dit de l’œuvre sans signature à la signature sans œuvre.} la tonalité, puis la modalité pour re-découvrir la musicalité du phénomène sonore, élément constitutif de la musique de sons. Le point de départ se situe durant la révolution industrielle avec l'invention de la téléphonie et de l'enregistrement sonore vers la fin du \textsc{xix}\ieme ~siècle, qui va littéralement `déterritorialisé' %\textit{déterritorialisé}\endnote{\textit{\textbf{Déterritorialisation}}:  concept créé par Gilles Deleuze et Félix Guattari en 1972 ...}
+Et enfin la troisième articulation couvrant largement le \textsc{xx}\ieme ~siècle va déconstruire\endnote{La déconstruction concerna l'art dans son ensemble depuis les origines, de l’art pariétal paléolithique au monochrome de Kasimir Malevich, du \textit{musilangage} au silence de John Cage, des Venus préhistoriques à l’urinoir de Marcel Duchamp; autrement dit de l’œuvre sans signature à la signature sans œuvre -- voire du transcendant à l'immanent, de l'art à l'artiste.\\ \indent Noter que le \textit{musilangage} est une hypothèse de recherche transdisciplinaire qui défend l'idée d'une origine commune entre la musique et le langage; \textit{la  musique  aurait  ainsi  une  origine  vocale,  et  le  langage  une origine  musicale}.} la tonalité, puis la modalité pour re-découvrir la musicalité du phénomène sonore, élément constitutif de la musique de sons. Le point de départ se situe durant la révolution industrielle avec l'invention de la téléphonie et de l'enregistrement sonore vers la fin du \textsc{xix}\ieme ~siècle, qui va littéralement `déterritorialisé' %\textit{déterritorialisé}\endnote{\textit{\textbf{Déterritorialisation}}:  concept créé par Gilles Deleuze et Félix Guattari en 1972 ...}
  l'objet sonore dans l'espace et dans le temps. Ce phénomène va amplifier -- dans tous les sens du terme -- et %démocratiser
  diffuser la tonalité comme standard musical, avec le tempérament égal, ainsi que la modalité avec l’ouverture aux musiques du monde, %, initiée par les compositeurs du \textsc{xx}\ieme ~siècle, depuis 
  à partir de l’exposition universelle de Paris de 1889, et entériner par la diffusion discographique et radiophonique durant les années 60, ce qui a permis d’élargir l’horizon musical en termes de pratique et d’écoute au delà de nos propres cultures.%musicales. 
 
 Dans le même temps, de nouveaux instruments dits analogiques\endnote{Par définition, les instruments `dits' analogiques se caractérisent par le ou les traitements en fonction continu du temps d'un signal électrique.} ouvrent un potentiel inouï tant au niveau du timbre que de la technique compositionnelle.
 
-À cela, s'ajoute la révolution informatique à la fin du \textsc{xx}\ieme ~siècle,  par la démocratisation grâce à l'internet des ressources numériques -- i.e. documentations, informations et applications -- permettant à tout à chacun de produire et de partager sa propre musique avec le monde entier, avec de nouvelles pratiques compositionnelles, des techniques de diffusions inouïes et des qui restent à inventer -- du moins pour ce qui concerne le monde `connecté'.
+À cela, s'ajoute la révolution informatique à la fin du \textsc{xx}\ieme ~siècle,  par la démocratisation, grâce à l'internet, des ressources numériques -- i.e. documentations, informations et applications -- permettant à tout à chacun de produire et de partager sa propre musique avec le monde entier, avec de nouvelles pratiques compositionnelles, des techniques de diffusions inouïes et des qui restent à inventer -- du moins pour ce qui concerne le monde `connecté'.
 
 %À cela, s'ajoute la révolution informatique -- dit aussi numérique -- qui permet d'accéder et de partager la musique dans le monde entier, avec de nouvelles pratiques compositionnelles, des techniques de diffusions inouïes et des qui restent à inventer. 
 
@@ -215,6 +241,8 @@ Dans le même temps, de nouveaux instruments dits analogiques\endnote{Par défin
 
 
 % préciser dans une dynamique "tribale" au sens de micro societé (à développer) ...
+
+%Bien sûr, cette analyse est eurocentrée et propose une analyse musicologique épistémologique du langage musical et de sa théorisation.
 
 \bigskip
 %pouvant s'inscrire dans une potentielle et nouvelle articulation.
@@ -231,21 +259,24 @@ C'est bien dans cette perspective holistique que nous pouvons créer une vérita
 
 Il faut dire que durant le \textsc{xx}\ieme ~siècle, il y eut beaucoup d'effervescence artistique et musical, et la musique de sons prit des formes aussi variés que pu l'être l'art en général, et la déconstruction fut une véritable épopée.
 
-Il serait vain ici d'en faire une description %-- de surcroit exhaustive -- 
-tant la terminologie stylistique\endnote{La terminologie est loin d'être clair. En effet, d'aucuns parleront de genre ou de mouvement, mais la différence -- voire la \textit{différance} derridienne -- est d'ordre typologique et chronologique, si bien que l'on pourrait en établir la généalogie. %Du prototype à l'archétype jusqu'au stéréotype, la nuance est subordonnée au régime doxique et épistémique.
-Pour ma part, il est plus intelligible de parler de prototype pour une particularité admise au sein d'une communauté, d'archétype pour la modélisation d'un ou de plusieurs prototypes et/ou archétypes, et de stéréotype pour la `normalisation' doxique et épistémique d'un ou de plusieurs archétypes.\\ \indent À noter que la \textit{doxa} est devenu de plus en plus manipulable et conditionnée par les mass média et les réseaux sociaux. De plus, l'\textit{épistémè} s'opère  traditionnellement par voie institutionnelle, bien que la tendance s'amenuise grâce notamment à l'accès et au partage du savoir par l'internet.}  multiplie les dénominations et se prête volontiers à une polysémie, parfois confuse, inclusive, dont les contours restent incertains, subtils, aussi bien pour les musicologues que pour les acteurs se réclamant, ou ne se réclamant pas, de telle ou telle mouvance.
+Il serait vain ici de faire une énumération de ces processus de déconstruction/reconstruction %-- de surcroit exhaustive -- de ce phénomène 
+tant la terminologie mise en œuvre\endnote{La terminologie est loin d'être clair. En effet, d'aucuns parleront de style, de genre ou de mouvement, mais la différence -- voire la \textit{différance} derridienne -- est d'ordre typologique. % et chronologique, si bien que l'on pourrait en établir la généalogie. %Du prototype à l'archétype jusqu'au stéréotype, la nuance est subordonnée au régime doxique et épistémique.
+%Pour ma part, 
+\\ \indent Dans le même ordre d'idée, il serait plus intelligible de parler de prototype pour une particularité admise au sein d'une communauté, d'archétype pour la modélisation d'un ou de plusieurs prototypes et/ou archétypes, et de stéréotype pour la `normalisation' doxique et épistémique d'un ou de plusieurs archétypes.\\ \indent À noter que la \textit{doxa} est devenu de plus en plus manipulable et conditionnée par les mass média et les réseaux sociaux. De plus, l'\textit{épistémè} s'opère  traditionnellement par voie institutionnelle, bien que la tendance s'amenuise grâce notamment à l'accès et au partage du savoir par l'internet.}  multiplie les dénominations et se prête volontiers à une polysémie, parfois confuse, inclusive, dont les contours restent incertains, subtils, aussi bien pour les musicologues que pour les acteurs se réclamant, ou ne se réclamant pas, de telle ou telle mouvance.
 
 Cela dit, il est possible d'esquisser, selon l'analyse paradigmatique précédemment évoquée et selon l'\textit{instrumentarium}\endnote{L'\textit{Instrumentarium} se rapporte à un ensemble d'instruments, à une formation, et qui se caractérise par son organologie; laquelle 
- consiste essentiellement à décrire tout objet destiné à produire des sons par le comment, le pourquoi, depuis quant, par qui ces sons sont-ils produits, pour jouer quelle musique, et à quelle fins; et par extension à répertorier ces objets pour une culture donnée et dans son ensemble à l'échelle du monde entier.}, les différentes tendances musicales de ce \textsc{xx}\ieme ~siècle.
+ consiste essentiellement à décrire tout objet destiné à produire des sons notamment par \textit{le comment, le pourquoi, depuis quant, par qui ces sons sont-ils produits, pour jouer quelle musique, et à quelle fins}; et par extension à répertorier ces objets pour une culture donnée, de la singularité au monde entier.}, les différentes tendances musicales de ce \textsc{xx}\ieme ~siècle.
  Sachant que la musique tonale est une interprétation hiérarchique de la musique modale, laquelle s'inscrit dans la musique de sons, l'\textit{instrumentarium} peut aussi se résumer de manière inclusive par les instruments respectivement  %-- et par extension tout objet -- 
- à hauteurs indéterminés, à hauteurs déterminés et tempérés, dont la manipulation compositionnelle s'effectue de manière scripturale, analogique, ou numérique. 
+ à hauteurs indéterminés, à hauteurs déterminés, et à hauteurs déterminés tempérés, dont la manipulation compositionnelle s'effectue de manière intuitive, scripturale, analogique, ou numérique. 
  Ainsi, selon ces critères, la combinaison de ces éléments caractérisant l'objet musical résume assez bien les spécificités inouïes de la musique du \textsc{xx}\ieme ~siècle. 
  
- Ceci vaut pour le phénomène sonore en tant qu'objet musical perçu. Au delà ou en deçà , il y a  le contexte situationnel ou rituel dans lequel la structure et la forme, c'est à dire le déploiement en temps selon des règles et des objectifs circonstanciels prédéfinis, vont prendre une dimension sociétale et communautaire %-- voire identitaire -- 
+ Ceci vaut pour le phénomène sonore en tant qu'objet musical perçu. Au delà ou en deçà, il y a  le contexte situationnel ou rituel dans lequel la structure et la forme, c'est à dire le déploiement en temps selon des règles et des objectifs circonstanciels prédéfinis, vont prendre une dimension sociétale et communautaire %-- voire identitaire -- 
 tacite, implicite, convenu, pour asseoir une autorité quelconque, faire école, faire partie d'une esthétique lié à un mouvement artistique, et que sais-je encore?  
 
 
-Tout cela s'est construit, si l'on peut dire, sur la déconstruction de la tonalité. En effet, celle-ci va déterminer ce que sera la musique de sons d'aujourd'hui, notamment  par la valorisation des sons dits extra-musicaux, par l'invention de systèmes dits atonales jusqu'à l'impasse que fut le sérialisme intégral, par une approche analytique de plus en plus précise allant au cœur du son, et par les tentatives de taxonomie axiomatique du phénomène sonore et musical. De fait, la `reconstruction' prendra des formes les plus inattendues et souvent les plus surprenantes, comme par exemple des concerts de `bruits', de percussions, de synthétiseurs de toutes sortes selon leur degré de technicité, des installations et des happenings mettant à rude épreuve les habitudes du public plus ou moins mélomane, provoquant tantôt indignation et fanatisme, tantôt incrédulité et fascination. %Ces comportements extrêmes s'estompèrent progressivement, par la connaissance et l'habituation, une forme de `déjà vu' ou `entendu' les désamorçant, par l'épuisement des possibilités combinatoires inouïes\endnote{Si tant est que cela soit possible, il doit bien en rester quelques unes à découvrir ou à re-découvrir.}, même si la musique reste un puissant véhicule d'affects.  
+Tout cela s'est construit, si l'on peut dire, sur la déconstruction\endnote{Autant certains artistes radicaux du début du XX\up{e} siècle pressentaient les dérives tyrannique de l'ère industriel, autant beaucoup d'artiste du second après-guerre, notamment durant les années 60 et 70, 
+%Déjà à cette époque, beaucoup 
+avait conscience de l'impasse consumériste et de l'enjeu écologique induit, et cela s'est manifesté socialement et musicalement par une sérieuse remise en question philosophique, laquelle reste toujours d'actualité. Ceci expliquant cela, les premiers déconstruisent la tonalité, tandis que les seconds contestèrent la suprématie dodécaphonique et sériel d'avant-garde.} de la tonalité. En effet, celle-ci va déterminer ce que sera la musique de sons d'aujourd'hui, notamment  par la valorisation des sons dits extra-musicaux, par l'invention de systèmes dits atonales jusqu'à l'impasse que fut le sérialisme intégral, par une approche analytique de plus en plus précise allant au cœur du son, et par les tentatives de taxonomie axiomatique du phénomène sonore et musical. De fait, la `reconstruction' prendra des formes les plus inattendues et souvent les plus surprenantes, comme par exemple des concerts de `bruits', de percussions, de synthétiseurs de toutes sortes selon leur degré de technicité, des installations et des \textit{happenings} mettant à rude épreuve les habitudes du public plus ou moins mélomane, provoquant tantôt indignation et fanatisme, tantôt incrédulité et fascination. %Ces comportements extrêmes s'estompèrent progressivement, par la connaissance et l'habituation, une forme de `déjà vu' ou `entendu' les désamorçant, par l'épuisement des possibilités combinatoires inouïes\endnote{Si tant est que cela soit possible, il doit bien en rester quelques unes à découvrir ou à re-découvrir.}, même si la musique reste un puissant véhicule d'affects.  
 
 %tout cela ne surprend plus grand monde de nos jours, même si la musique reste un puissant véhicule d'affects.  
 
@@ -253,20 +284,38 @@ Tout cela s'est construit, si l'on peut dire, sur la déconstruction de la tonal
 %Pour mémoire, et dans les grandes lignes, la déconstruction de l'ultrachromatisme wagnerien débouchera sur le sérialisme integral de Stockhausen, en passant par le dodécaphonisme shoenbergien, le bruit au sens de son complexe à hauteur indéterminé s'invitera de plus en plus dans le champ du possible, de Russolo et de Varèse jusqu'à Lachemann, en passant par le spectralisme  de Grisey, pour les musiques écrites.
 \bigskip
 
+
+Dès les années 50, une technique de composition fait intervenir la notion d'aléatoire controlé, qui consiste à donner une liberté d'interprétation suivant les indications du compositeur, de façon à générer une complexité visant un effet global déterminé. Cela concerne principalement les éléments structurant de l'œuvre. Une autre technique concerne les formes dites mobiles -- non sans la référence aux mobiles d'Alexander Calder --, pour lesquelles le ou les interprètes doivent combiner des fragments musicaux prédéterminés. Puis une dernière appelée œuvres indéterminées, usant de `partition' graphique (code) ... dont le but est ... et aussi d'évaluer l'interaction entre l'interprète et l'objet médiateur proposé par le compositeur.  
+
+Ces concepts sont des modalités d'improvisation orientée -- qui ont pour certaines d'entre elles existé bien avant les années 50, mais de façon anecdotique et peu ou pas développés -- qui servent un dessein compositionnel, et reposent apriori sur le potentiel créatif du ou des interprètes.  Aussi, ces concepts doivent être distingués des procédés d'écriture faisant appel aux mathématiques probabilistes et statistiques, permettant l'organisation musicales de système plus ou moins complexe, et entièrement géré par le compositeur. %souvent repose sur une harmonie tonale, voire sur une liberté totale concernant le free jazz. 
+
 %À la marge de tous ces événements, 
 %L'œuvre ouverte est un pan
-C'est dans les années 60 que quelques artistes envisagent le concept d'œuvre ouverte. Par définition, l'œuvre ouverte est la somme d'événements, voire la somme d'individu, d'une situation donnée, comme l'expression de cette situation par la médiation de l'art en question. C'est un processus, intégrant \textit{a priori} et \textit{in situ}, une potentielle ou effective contextualisation.
+À partir des années 60, quelques artistes envisagent le concept d'œuvre ouverte. Par définition, l'œuvre ouverte est la somme d'événement, voire la somme d'individu, d'une situation donnée, comme l'expression de cette situation par la médiation de l'art en question. C'est un processus, intégrant \textit{a priori} et \textit{in situ}, une potentielle ou effective contextualisation.
+
+
+
+\bigskip
+
+%Pour la petite histoire, ce concept s'est construit sur une idée ... aléatoire controlé ...  écriture musicale versus free jazz
+%
+%il faut distinguer l'oeuvre ouverte  des forme mobiles, aleatoire controle, stochastique,
 
 Ainsi, dans l'art sonore, certains compositeurs ont tenté avec plus ou moins de succès une reconstruction interactive avec les interprètes et parfois même avec le public.
 
 %L'enregistrement sonore va permettre des techniques de transf
-\bigskip\bigskip
-   [à préciser -- de quelles tentatives il est question, etc.]
+%\bigskip\bigskip
+%   [à préciser -- de quelles tentatives il est question, etc.]
+%\bigskip
+%
+%  
+%Bien que des tentatives en ce sens ont déjà été réalisé dans le cadre pédagogique pour les écoles de musique, grâce notamment aux initiatives de Jean-Yves Bosseur consignées dans l'un de ses livres textes-partitions \textit{Le temps de le prendre}, ce mode de pratique musicale n'a pas pu transcender nos habitudes culturelles\endnote{Ces habitudes sont ancrés en nous selon un mode atavique systémique de soumission pour lequel il est difficile, dans un premier temps d'en avoir conscience, et dans un second temps, de s'en émanciper.} tant le lobby de l'industrie musicale sous tout ses aspects privilégie l'attitude mercantile du fait musical. 
+
 \bigskip
 
-  
-Bien que des tentatives en ce sens ont déjà été réalisé dans le cadre pédagogique pour les écoles de musique, grâce notamment aux initiatives de Jean-Yves Bosseur consignées dans l'un de ses livres textes-partitions \textit{Le temps de le prendre}, ce mode de pratique musicale n'a pas pu transcender nos habitudes culturelles\endnote{Ces habitudes sont ancrés en nous selon un mode atavique systémique de soumission pour lequel il est difficile, dans un premier temps d'en avoir conscience, et dans un second temps, de s'en émanciper.} tant le lobby de l'industrie musicale sous tout ses aspects privilégie l'attitude mercantile du fait musical. 
+[ … ]
 
+\bigskip
 
 Cela dit, cette démarche était encadrée dans un context institutionnel permettant de promouvoir une pratique musicale \textit{hic}  et \textit{nunc} et une approche compositionnelle autre pour enfin créer des liens avec l'enseignement traditionnel. Bien que cela n'est pas fait consensus dans le temps et dans l'espace, Il en reste des traces de nos jours dans les ateliers dit d'éveil musical pratiqués dans certaines classes de musique au collège ou dans les écoles de musique. 
 
@@ -278,15 +327,18 @@ Cela dit, cette démarche était encadrée dans un context institutionnel permet
 
 %\textit{Cette approche est liée à une écoute, aussi affinée que possible, du monde sonore qui nous entoure, à ce que peuvent impliquer des échanges musicaux à l'intérieur d'une collectivité lorsque la musique n'est plus seulement propulsée comme produit à consommer, ou conçue comme recherche de laboratoire (ce qui représente, pour beaucoup, l'image de marque de la musique dite contemporaine), mais plutôt comme processus de sensibilisation et de questionnement, modelable selon les nécessités et facultés d'invention de chacun.} J.-Y. \textsc{Bosseur}, \textit{Le temps de le prendre}, Paris, Éditions Kimé, 1997, p. 202.
 
-%\bigskip
+\bigskip
 %Malheureusement cela n'a pas fait consensus dans le temps et dans l'espace, si bien qu'aujourd'hui il n'en reste qu'une anecdote -- dans le meilleur des cas -- dans la littérature consacrée à l'histoire de la musique du XX\up{e} siècle.
-\bigskip\bigskip\bigskip
-   [à reformuler...]
+%\bigskip\bigskip\bigskip
+%   [à reformuler...]
+%
+%%  
+%Pour revenir à notre propos, il va sans dire qu'il ne s'agit pas de remettre en cause des pratiques musicales s'inscrivant dans la tradition, mais plutôt de réinventez un monde à partir de nos acquis dans une perspective de recherche continuelle et sans cesse renouvelée de notre monde sonore impliquant les forces vives de chacun.
+%
+%Il est alors question ici de se repositionner par rapport à ces tentatives, de modéliser une pratique issue de ces expériences, qui n'ont en aucun cas était des échecs, mais plutôt une avant-garde que l'histoire nous pousse à réitérer aujourd'hui,
+\bigskip
 
-%  
-Pour revenir à notre propos, il va sans dire qu'il ne s'agit pas de remettre en cause des pratiques musicales s'inscrivant dans la tradition, mais plutôt de réinventez un monde à partir de nos acquis dans une perspective de recherche continuelle et sans cesse renouvelée de notre monde sonore impliquant les forces vives de chacun.
-
-Il est alors question ici de se repositionner par rapport à ces tentatives, de modéliser une pratique issue de ces expériences, qui n'ont en aucun cas était des échecs, mais plutôt une avant-garde que l'histoire nous pousse à réitérer aujourd'hui, dans un contexte sociétal qui se doit d'évoluer; pour lors, ce nouveau paradigme a pour vocation d'initier un mouvement culturel en tant que tel et social éthologiquement -- voire ethnologiquement  -- parlant au regard du contexte historique.%\footref{efn:pr}. 
+[ … ] dans un contexte sociétal qui se doit d'évoluer; pour lors, ce nouveau paradigme a pour vocation d'initier un mouvement culturel en tant que tel et social ethnologiquement -- voire éthologiquement -- parlant au regard du contexte historique.%\footref{efn:pr}. 
 
 %The next endnote\endnote{This endnote gets a label.}\label{en:test} has  the number~\ref{en:test}. Let's now test endnotemark\endnotemark[\ref{en:test}].
 
@@ -297,7 +349,9 @@ Il est alors question ici de se repositionner par rapport à ces tentatives, de 
 
 \section{Qu’est-ce que la musique?}
 
-...
+…
+
+Qu’est-ce qu'un bruit?
 
 \bigskip
 
@@ -312,7 +366,7 @@ Maintenant, on peut appréhender la musique, dans une continuité dite de tradit
 
 On peut aussi l'appréhender respectivement comme acte d'expression ou de créativité, lesquels ne sont évidemment pas exclusifs.
 
-À cela, j'ajouterai le développement personnel et collectif, ce qui constitue, au delà de l'art pour l'art, ou au delà d'une posture artistique consciente, un pas vers l'émancipation du sujet vers sa réalisation, faisant partie d'un tout.
+À cela, j'ajouterai comme horizon le développement personnel et collectif, ce qui constitue, au delà de l'art pour l'art, ou au delà d'une posture artistique consciente, un pas vers l'émancipation du sujet vers sa réalisation, faisant partie d'un tout.
 
 
 %on peut se laisser porter par la musique ...
@@ -325,7 +379,7 @@ On peut aussi l'appréhender respectivement comme acte d'expression ou de créat
 
 \section{Objet sonore}
 
-...
+…
 
 \newpage
   
