@@ -3,7 +3,7 @@
 %% count number of words:
 % $ pdftotext essai.pdf - | wc -w
 
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -24,7 +24,7 @@
 \renewcommand{\nomname}{Glossaire}
 \usepackage[pdftex,backref=false,pdfborder={0 0 0}]{hyperref}
 \usepackage[nonumberlist]{glossaries}
-\makeglossaries
+%\makeglossaries
 \usepackage{textcomp}
 \usepackage{enumitem}
 \renewcommand{\theenumi}{{\scriptsize \textbf{\emph{\thesection.\arabic{enumi}}}}}
@@ -61,9 +61,9 @@
 \usepackage{enotez}
 % https://tex.stackexchange.com/questions/202805/refer-to-an-endnote-with-the-enotez-package-points-to-the-wrong-note
 \renewcommand{\footnote}{\endnote}
-\newcommand{\footref}[1]{%
-  \enotezwritemark{\enmarkstyle\ref{#1}}%
-}
+%\newcommand{\footref}[1]{%
+%  \enotezwritemark{\enmarkstyle\ref{#1}}%
+%}
 %\let\endnote=\endnote
 \newcommand{\eo}{\textsl{etou}}
 \usepackage{xcolor}
