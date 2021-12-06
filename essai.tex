@@ -6,10 +6,8 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{float}
 \usepackage{setspace}
-
+\usepackage{longtable}
 \usepackage{xcolor}
 \usepackage[font=small,margin=1mm]{caption}
 \usepackage[toc,page]{appendix}
@@ -19,16 +17,8 @@
 \renewcommand\cftsecfont{\bfseries}
 \renewcommand{\cftaftertoctitle}{\vspace{5pt} \hrule}
 \usepackage[nottoc,notindex]{tocbibind}
-\usepackage[french]{nomencl}
-\makenomenclature
-\renewcommand{\nomname}{Glossaire}
 \usepackage[pdftex,backref=false,pdfborder={0 0 0}]{hyperref}
-\usepackage[nonumberlist]{glossaries}
-%\makeglossaries
 \usepackage{textcomp}
-\usepackage{enumitem}
-\renewcommand{\theenumi}{{\scriptsize \textbf{\emph{\thesection.\arabic{enumi}}}}}
-%pas d'indice dans la bibliographie
 \makeatletter
 \renewcommand{\@biblabel}[1]{}
 \makeatother
@@ -66,7 +56,6 @@
 }
 %\let\endnote=\endnote
 \newcommand{\eo}{\textsl{etou}}
-\usepackage{xcolor}
 \definecolor{DarkRed}{RGB}{139,0,0}
 \pagenumbering{gobble} 
 
@@ -182,7 +171,7 @@ Il faut sans doute être fou pour vouloir changer cela. Peut être ne le suis-je
 \\ \indent \textsl{The political aspect -- as a possible transitional state -- won't be developed too much during this writing, but it needs sometimes to precise what behind the need for change and what to change and maybe how and why. These digressions will be done here and there, when required as a note.}% -- preceded by the symbol \anar
 \\ \indent \textsl{Presently,  it is important to emphasise the totalitarian drift of the specialisation and professionalisation in our societies. The first one reduces the knowledge to one or few topics against all holistic observations, and by induction the second one perverts human relationships because the professionnel acts a routine as a specialist. This means an over-reliance of the system and its institutions, notably by partitioning responsibilities.}
 } \textsl{described by Aldous Huxley in 1932, under the `approving gaze' of} \textit{Big Brother}\endnote{\textit{Big Brother} -- en référence au roman de George Orwell \textsl{1984} publié en 1949 -- est un système de surveillance et de propagande omniprésente -- incarnant le `parti' et qui encourage la délation jusqu’au sein de la famille --, et par extension tout dispositif, notamment par le biais de l'intelligence artificielle connectée, qui nuit à la liberté individuelle et à la vie privé, généralement sous le prétexte fallacieux de sécurité nationale.}. 
-\textsl{There is definitely no future for this world}\endnote{\textsl{The inevitable collapse of our civilisation concerns the hegemony or even the supremacy of money. Indeed, Money -- i.e. the haves, the super-rich -- rules the world against Nature, promoting notably competitiveness instead of sharing resources.}}. \textsl{We have to build from scratch a new world. There is no miracle recipe, but some alternatives exist}\endnote{\textsl{Some of them require -- in the context of political transition -- to be mentioned such as: 
+\textsl{There is definitely no future for this world}\endnote{\textsl{The inevitable collapse of our civilisation concerns the hegemony or even the supremacy of money. Indeed, Money -- i.e. the haves, the super-rich -- rules the world against Nature, promoting notably competitiveness instead of sharing resources.}\\ \indent \textit{L’obligation de produire aliène la passion de créer.}}. \textsl{We have to build from scratch a new world. There is no miracle recipe, but some alternatives exist}\endnote{\textsl{Some of them require -- in the context of political transition -- to be mentioned such as: 
 \begin{itemize}
 \item A Mondial negative growth is obviously needed -- at least according to the actual standard, which means positive growth on different markers.
 \item An Unconditional Universal Income, notion imagined and developed by the french sociologist and economist Bernard Friot.
@@ -198,7 +187,7 @@ I believe that everybody can be part of musical practice in a playful way, for t
 %  
 %En effet, la musique permet un developpement cognitif significatif créant un lien social fort et permet aussi pour chacun de bénéficier de ses nombreuses vertus thérapeutiques.
 Indeed, music allows significant cognitive development creating a strong social bond and also allows everyone to benefit from its many
-therapeutic virtues on the body and mind}\endnote{La pratique de la musique est un vecteur de plasticité anatomique et fonctionnelle en termes de registres perceptif, cognitif (mémoire et langage), émotionnel et moteur, impliquant le réseau neuronal dans son entièreté et ses répercussions sur l'ensemble du corps.}.
+therapeutic virtues on the body and mind}\endnote{La pratique de la musique est un vecteur de plasticité anatomique et fonctionnelle en termes de registres perceptif, cognitif (mémoire et langage), émotionnel et moteur, impliquant le réseau neuronal dans son entièreté et ses répercussions sur l'ensemble du corps. En d'autres termes, la musique aide -- en améliorant de façon significative -- à soigner ou à soulager des sujets dans le cadre de la thérapeutique, ou tout simplement à mieux vivre, pour soi et avec les autres.}.
 
  
 %Indeed, music allows a significant cognitive development creating a strong social bond and also allows for everyone to benefit from its recognised therapeutic virtues. 
@@ -431,14 +420,15 @@ En d'autres mots, il s'agit de considérer une sériation d'objets sonores ou de
 autonome en tant qu'unité musicale. %et se distingue des autres sections dans une logique temporelle discontinue.  
 %\textsl{The idea of autonomous musical units is, in order to reduce the perception toward the smallest slice of time, to tend toward eternity}. 
 L'idée d'unité musicale autonome entre dans le cadre de la théorie de la \textit{gestalt}\endnote{La théorie de la \textit{gestalt} est l'ensemble des processus de l'esprit et des sens mis en œuvre sur notre relation avec le monde, sur sa représentation. Elle tend à simplifier ou à optimiser notre perception, non pas par une accumulation d'éléments groupés ou discriminés reliant cette perception, mais par la recherche d'une forme simple ou connue liée à cette perception. Ces processus agissent en temps, et par conséquent sollicitent la mémoire sur ses différents plans simultanément, impliquant la mémoire à court terme, à long terme, déclarative, non déclarative, sensorielle, sémantique, etc. }\label{efn:gestalt}. %rend compte de la focalisation perceptive d'une durée infinitésimale, afin de tendre vers l'éternité du moment présent.
-La forme est alors de type mobile, tant que les moments ne sont pas reliés entre eux ou peuvent l'être suivant une esthétique compositonelle prédéfinit et bien entendu de façon non hiérarchique, et intègre de la sorte un potentiel de \textsl{never-ending process}.
+La forme est alors de type mobile, tant que les moments ne sont pas reliés entre eux ou peuvent l'être suivant une esthétique compositonelle prédéfinit et bien entendu de façon non hiérarchique, et intègre de la sorte un potentiel de \textsl{`never-ending process'}.
 Pour la `musique expérimentale', le concept vise un résultat non prévisible \textit{a priori} et non déterminé pour le moins, dans la mesure où l'exécution est composée en place et lieu d'une composition exécutée. %\subsubsection{Musiques `expérimentales'}
 
 Dans une modalité d'écoute, le silence prend une part privilégiée. 
-Le silence en musique est un élément essentiel, qui dans le contexte de discontinuité s'inscrit souvent comme un marqueur séparant deux unités musicales. Aussi, il est l'alpha et l'omega d'une entité sonore ou musicale. Le silence peut alors revêtir plusieurs interprétations, suivant sa durée, du micro-silence comme modalité d'articulation au silence absolu\endnote{Le silence dans sa durée et dans son principe revêt un caractère paradoxal car il suppose être, dans l'absolu, l'absence de propagation d'ondes sonores ou de vibration du tympan. Ce qui n'est qu'une vue de l'esprit. %hors d'atteinte car nous ne pouvons nous soustraire au propre son que notre corps produit)
+Le silence en musique est un élément essentiel, qui dans le contexte de discontinuité s'inscrit souvent comme un marqueur séparant deux unités musicales. Aussi, il est l'alpha et l'omega d'une entité sonore ou musicale. Le silence peut alors revêtir plusieurs caractères, suivant sa durée, du micro-silence comme modalité d'articulation au silence absolu\endnote{Le silence dans sa durée et dans son principe revêt un caractère paradoxal car il suppose être, dans l'absolu, l'absence de propagation d'ondes sonores ou de vibration du tympan. Ce qui n'est qu'une vue de l'esprit. %hors d'atteinte car nous ne pouvons nous soustraire au propre son que notre corps produit)
 Donc, de manière relative, le silence est l'indicateur d'une information nulle. 
-Mais replacé dans son contexte, dans son usage courant, l'expérience subjective du silence prend une dimension autre et peut apparaitre comme silence d'apaisement, de détente, de répis ou silence inquiétant, éprouvant, oppressant; \textit{silence de ceux qui n'ont rien à se dire ou silence de ceux qui se comprennent sans un mot.} Dans le contexte musicale, c'est une respiration, un soupir, une pause, une suspension. Ou bien alors \textit{l'ensemble des sons non voulus}, selon le point de vue d'un certain John Cage.}, son placement en temps, et le contexte environnemental. Il serait vain céans d'en décrire tous les aspects, mais il est possible de distinguer trois classes. Le silence de prolongation, celui qui fait résonance avec, et résonner, l'espace en termes de réverbération, comme la queue d'une comète représentant le (ou les) son(s) qui précéde(nt) cet état, et qui persiste(nt) par son(leur) absence dans l'espace partagé avec l'auditeur. % de son(leur) existence. 
+Mais replacé dans son contexte, dans son usage courant, l'expérience subjective du silence prend une dimension autre et peut apparaitre comme silence d'apaisement, de détente, de répis ou silence inquiétant, éprouvant, oppressant; \textit{silence de ceux qui n'ont rien à se dire ou silence de ceux qui se comprennent sans un mot.} Dans le contexte musicale, c'est une respiration, un soupir, une pause, une suspension. Ou bien alors \textit{l'ensemble des sons non voulus}, selon le point de vue d'un certain John Cage.}, son placement en temps, et le contexte environnemental. Il serait vain céans d'en décrire tous les aspects, mais il est possible d'en distinguer au moins trois classes. Le silence de prolongation, celui qui fait résonance avec, et résonner, l'espace en termes de réverbération, comme la queue d'une comète représentant le (ou les) son(s) qui précéde(nt) cet état, et qui persiste(nt) dans notre esprit au delà de son effectivité dans l'espace partagé avec l'auditeur. % de son(leur) existence. 
 Le silence de préparation, il est l'inéluctable catastrophe thomienne\endnote{Selon l'idée aristotélicienne d'une stabilité structurelle sous-jacente à toute qualité, l'avènement d'un conflit -- lutte entre au moins deux attracteurs par exemple -- provoquant une rupture, un saut qualitatif, constitue une catastrophe telle que René Thom l'a formalisé et modélisé en 1972 en termes de topologie et de géométrie différentielles, et qui peut être compris plus largement en termes phénoménologiques.}\label{efn:thom}, une tension qui doit se résoudre et qui se résout. Et enfin le silence `vide', qui se \textit{détache du silence de prolongation et ne présage aucune résolution}. C'est le silence cagien, celui qui n'a ni passé, ni futur, celui qui n'est pas vraiment le silence, mais une plongée dans l'imperceptible, le subtil. Il est le présent.
+On pourrait ajouter le silence intermédiaire ou le silence élastique, c'est à dire une sorte de fondu/enchainé sans rupture -- conditionné par le contexte formel -- entre le silence de prolongation et le silence de résolution.
 
 %Quant à la `musique expérimentale', principalement définit et incarnée par John cage, le concept vise un résultat non prévisible \textit{a priori} et non déterminé pour le moins, dans la mesure où l'exécution est composée en place et lieu d'une composition exécutée. 
 Le lien qui existe avec la \textit{moment form}, la `musique expérimentale' et l'œuvre ouverte, consiste à exercer, à diversifié, à transcender nos modalités d'écoute, conditionnées par notre héritage culturel, voire atavique et nos croyances; ou plus simplement à considérer le moment présent dans l'attention du monde vibratoire, avec tous nos sens et toute notre intelligence.
@@ -539,7 +529,8 @@ Dès 1913, Marcel Duchamp, influencé et inspiré par le mouvement dada, remit e
 Puis vint l'age d'or de l'art conceptuel. On pourrait en dater le début avec \textit{One and Three Chairs} de Joseph Kosuth en 1965 qui, partant du concept de la chaise, propose trois représentations distinctes, dans ce cas sans répétition formelle: \textit{l’ensemble dépasse ainsi l’objet pour approcher le concept} lui-même. 
 % SOURCE -- https://blogacabdx.ac-bordeaux.fr/culture64/wp-content/uploads/sites/74/2019/12/EAC35.pdf
 Puis la fin -- non de l'art conceptuel puisque désormais \textit{tout art après Duchamp est conceptuel}, mais de son age d'or -- avec \textit{An Oak Tree} de Michael Craig Martin en 1974, qui expose hors de portée du public un verre d'eau, en le désignant comme étant un chêne, détournant ainsi le concept par transsubstantiation. Le texte qui l'accompagne -- qui d'ailleurs fait partie intégrante de l'œuvre -- est particulièrement éloquent à cet égard.  
-Évidemment, les œuvres et les artistes précédemment cités, le sont non seulement à titre d'exemples, d'illustrations, mais aussi, sont particulièrement significatives et significatifs dans leur radicalité et leur chronologie.
+
+Évidemment, les œuvres et les artistes précédemment cités, le sont non seulement à titre d'exemples, d'illustrations, mais aussi, sont particulièrement significatives et significatifs dans leur radicalité et leur chronologie, pour y être effectivement mentionnés.
 
 
 Maintenant, la musique, ou plus spécifiquement l'objet musical, en tant que concept, n'échappe pas à la règle. Au même titre que la représentation mentale du concept par l'objet ou par le signe, la musique conceptuelle est l'image sonore, une forme d'écoute, que met en place notre esprit par la pensée d'une idée -- à propos de la musique -- évoquée ou exprimée notamment par l'œuvre. %En ce sens, l’idée de l’œuvre d’art unique est éludée au profit 
@@ -548,7 +539,7 @@ En ce sens, nous pouvons parlé de musiques imaginaires ou imaginées par l'obse
 \\ \indent Pour mémoire, la sémiologie est l'étude des pratiques signifiantes ou d'un système signifiant. Cela concerne les symboles ou les signes destinés à évaluer, à transmettre ou à partager une information, un concept, telle que de la musique en ce qui nous intéresse. Dans ce cas, il nous faut inclure l'intention du compositeur selon des stéréotypes ou des archétypes, généralement culturels, et la compréhension que peut en faire le potentiel auditeur. La sémiologie consiste alors à comprendre un élément d'information. Autrement dit, ce qu'un signe, ou un ensemble de signes, provoque, ou peut provoquer dans notre esprit.}
  -- qui nous ai proposé. L'œuvre est donc ce qui provoque notre imaginaire, souvent dans le(s) domaine(s) qui lui(leur) est(sont) attribué(s). 
 
-Présentement, ce n’est plus l’œuvre d’art qui crée le public, c’est le public qui crée l’œuvre d’art. Aussi, nous pouvons créer l'œuvre, non pour un public, mais pour nous élever par l'acte créatif que le concept nous permet d'expérimenter.
+Présentement, ce n’est plus l’œuvre d’art qui crée le public, c’est le public qui crée l’œuvre d’art. Désormais, nous pouvons créer l'œuvre, non pour un public, mais pour nous élever par l'acte créatif que le concept nous permet d'expérimenter.
 
 %se libérer de l’intentionnalité dans l’acte créateur, de la notion de goût par l’indifférence esthétique, ainsi que de l’idée de l’œuvre d’art unique qu’il soumet à la loi du « définitivement inachevé »
 %L'idée musicale est le processus mis en place par le compositeur 
@@ -568,19 +559,65 @@ Penser la musique autrement, c'est prendre conscience que tout peut être musiqu
 
 \section{Objet sonore}
 
-Bien que le concept d'objet sonore reste une tentative de formalisation\endnote{Difficile de ne pas cité l'incontournable \textit{Traité des objets musicaux} de Pierre Schaeffer publié en 1966, quant on parle d'objet sonore. Malgré le caractère érudit de l'ouvrage, il subsiste quelques écueils, par exemple sur la notion d'objet `convenable' dont la définition reste pour le moins abstraite et ouverte. Aussi, la notion d'écoute réduite, qu'il qualifie de condition \textit{sine qua non} à tout objet sonore, consisterait à faire abstraction du message causal du son et de sa contextualisation, fruit de l'\textit{épochè} (sic) -- qu'il distingue de l'objet musical qui fait intervenir un référence culturelle -- pour en faire son analyse typologique. Il choisit la méthode par répétition -- reconnaissant la difficulté d'une telle démarche qui contribuerait à nous éloigner de toutes causalités -- induisant l'enregistrement de l'objet d'étude, confinant ce dernier dans la musique concrète.\\ \indent Rappelons que Pierre Schaeffer forgea avec Pierre Henry ce terme de musique concréte en 1948, pour se fondre dans la musique électroacoustique dans les années soixante. Cela consiste à faire de la musique empiriquement, i.e. concrètement, à partir de sons enregistrés, sur vinyl puis sur bandes magnétiques, pour être manipulés, transformés, mixés, en une œuvre pour le moins inouï.}  -- voire de modélisation -- d'un phénomène sonore existant ou imaginaire, irréductible ou complexe, structurant et structuré, je me propose d'en identifier, d'en énoncer quelques axiomes ou éléments irréductibles comme point de départ vers une nomenclature, une exploration, propre à chaque formation. 
+Bien que le concept d'objet sonore reste une tentative de formalisation\endnote{Difficile de ne pas cité l'incontournable \textit{Traité des objets musicaux} de Pierre Schaeffer publié en 1966, quant on parle d'objet sonore. Malgré le caractère érudit de l'ouvrage, il subsiste quelques écueils, par exemple sur la notion d'objet `convenable' dont la définition reste pour le moins abstraite et ouverte. Aussi, la notion d'écoute réduite, qu'il qualifie de condition \textit{sine qua non} à tout objet sonore, consisterait à faire abstraction du message causal du son et de sa contextualisation, fruit de l'\textit{épochè} (sic) -- qu'il distingue de l'objet musical qui fait intervenir un référence culturelle -- pour en faire son analyse typologique. Il choisit la méthode par répétition -- reconnaissant la difficulté d'une telle démarche qui contribuerait à nous éloigner de toutes causalités -- induisant l'enregistrement de l'objet d'étude, confinant ce dernier dans la musique concrète.\\ \indent Rappelons que Pierre Schaeffer forgea ce terme de musique concréte en 1948, pour se fondre plus tard dans la musique électroacoustique dans les années soixante. Cela consiste à faire de la musique empiriquement, i.e. concrètement, à partir de sons enregistrés, sur vinyl puis sur bandes magnétiques, pour être manipulés, transformés, mixés, en une œuvre pour le moins inouï.}  -- voire de modélisation -- d'un phénomène sonore existant ou imaginaire, irréductible ou complexe, structurant et structuré, je me propose d'en identifier, d'en énoncer quelques axiomes ou éléments irréductibles comme point de départ vers une nomenclature, une exploration, qui se doit d'être propre à chaque formation. 
 Ainsi, le principe qui régira toute approche performative sera basé de près ou de loin sur l'objet sonore en tant qu'unité, \textit{gestalt}, forme. 
 
 Le concept d'objet sonore n'est pas clairement posé tant il dépend de son objet téléologique. Ici, il s'agit plus de construire cet objet téléologique à partir d'objets sonores que le contraire.   
-Aussi, il me parait plus simple et plus pertinent d'aborder l'objet sonore par une analogie toute relative emprunt à la linguistique et plus spécifiquement à la phonologie -- voire la phonètique. Ainsi, il est possible de distinguer l'unité irréductible en tant que phonème, que l'on peut rebaptiser `sonème'. Puis, le morphème qui est composé de sonèmes pour former une unité `supérieur', d'ordre culturel, symbolique. Enfin, la syntaxe, ensemble de règles combinant, associant les sonèmes et les morphèmes, et le mode d'articulation visant un effet, une image, un concept, entre différents sonèmes ou morphème, en harmonie (superposition de sonèmes/morphèmes) ou en temps (enchainement de sonèmes/morphèmes). 
+Aussi, il me parait plus simple et plus pertinent d'aborder l'objet sonore par une analogie toute relative emprunt à la linguistique et plus spécifiquement à la phonologie -- voire la phonètique. Ainsi, il est possible de distinguer l'unité irréductible en tant que phonème, que l'on peut rebaptiser `sonème'. Puis, le morphème qui est composé de sonèmes pour former une unité `supérieur', d'ordre culturel, symbolique, musical. Enfin, la syntaxe, ensemble de règles combinant, associant, articulant les sonèmes et les morphèmes, visant un effet, une image, un concept, entre différents sonèmes ou morphème, en harmonie (superposition de sonèmes/morphèmes) ou en temps (enchainement de sonèmes/morphèmes). À partir de là, les motifs et les phrases peuvent constituer un ordre supérieur d'objets sonores. De la micro-forme à la macro-forme, cela pourrait se résumer ainsi:
+sonème $\rightarrow$ morphème $\rightarrow$ motif $\rightarrow$ phrase $\rightarrow$ section $\rightarrow$ œuvre. Ces termes pouvant bien entendu se recouvrir jusqu'à ne faire qu'un.
+
+
 Ceci constituera notre définition de l'object sonore.
 \bigskip
 
 %il est possible d'identifier quelques axiome ou elements irreductibles ...
 
+\noindent \textbf{Nous entendons tous, mais nous n'écoutons pas les même choses.}
+
+\bigskip
+
+%\textit{La recherche d’une typologie « absolue » est illusoire.} Cependant, 
+Loin de prétendre à une description absolue et exhaustive, je me contenterai d'énoncer quelques pistes, usant de la terminologie d'un compositeur, sans que cela soit inscrit dans le marbre. En tout état de cause, il est possible de décrire un objet sonore selon des caractéristiques pertinentes que l'on souhaite formaliser ou formuler dans le but de disposer d'un langage commun au groupe impliqué.
+\bigskip
+
+De l'objet sonore:
+
+\begin{longtable}{rcccl}
+durée courte & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & durée longue \\
+\textit{quantum} & $\leftarrow$ & grain & $\rightarrow$ & lisse \\
+régulier & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & chaotique \\
+continu & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & discontinu \\
+son pur & $\leftarrow$ & son cannelé & $\rightarrow$ & bruit blanc \\
+monophonie & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & polyphonie \\
+hauteurs définis & $\leftarrow$ & masse fixe & $\rightarrow$ & masse variable \\
+%grave & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & aigu \\
+\textit{rallentendo} & $\leftarrow$ & \textit{a tempo} & $\rightarrow$ & \textit{accelerando} \\
+hyper-localisation & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & ubiquité \\
+près & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & loin \\
+petit espace clos & $\leftarrow$ & -- -- -- -- -- -- & $\rightarrow$ & grand espace clos \\
+
+\end{longtable}
+
+%\bigskip
+
+%\begin{description}
+%\item[\texttt{[]}] \textbf{Bruit blanc}
+%\begin{itemize}
+%\item respiration, souffle, ...
+%\item vent, pluie, ...
+%\item moulin à café, papier de verre, ...
+%\end{itemize}
+%\item[\texttt{[]}] \textbf{Agogique macroscopique}
+%\begin{itemize}
+%\item \textit{accelerando}
+%\item \textit{rallentendo}
+%\end{itemize}
+%
+%\end{description}
+
 
 \subsection{L'articulation}
-
+variation,  articulation,  punctuation or  transition
 
 \subsection{\textsl{The score}}
 
@@ -622,7 +659,7 @@ Avant toutes choses, je voudrais revenir sur quelques notions telles que le conc
 
  « \textit{Croyant, comme Max Weber, que l’homme est un animal pris dans les réseaux de signifiance qu’il a lui-même tissés, je considère la culture comme assimilable à une toile d’araignée, et par suite son analyse comme relevant non d’une science expérimentale en quête de loi mais d’une science interprétative en quête de sens.} »
 
-Ainsi, la culture est « \textit{un modèle de significations incarnées dans des symboles qui sont transmis à travers l'histoire, un système de conceptions héritées qui s'expriment symboliquement, et au moyen desquelles les hommes communiquent, perpétuent et développent leur connaissance de la vie et leurs attitudes devant elle} ». Quant le symbole représente « \textit{tout objet, acte, événement, propriété ou relation qui sert de véhicule à un concept} ».
+Aussi, la culture est « \textit{un modèle de significations incarnées dans des symboles qui sont transmis à travers l'histoire, un système de conceptions héritées qui s'expriment symboliquement, et au moyen desquelles les hommes communiquent, perpétuent et développent leur connaissance de la vie et leurs attitudes devant elle} ». Quant le symbole représente « \textit{tout objet, acte, événement, propriété ou relation qui sert de véhicule à un concept} ».
 % SOURCE L’anthropologie interprétative Clifford Geertz (1973) Bali, interprétation d’une culture, Gallimard. https://dun.unistra.fr/ipm/uoh/anthropologie/fichiers/doc_geertz_int_01_01_fr.pdf
 
 \bigskip
@@ -635,7 +672,7 @@ Ainsi, la culture est « \textit{un modèle de significations incarnées dans de
 %Ce qui ressort de cette aperçu historique est l'incroyable diversité de concevoir, de composer, d'écouter et de vivre le phénomène sonore que l'on appelle dans certaines circonstances musique. Évidemment, loin d'être exhaustif, ce résumé a pour but de donner des pistes d'investigations afin de découvrir, de redécouvrir ou d'approfondir certaine démarche et d'avoir une connaissance ou un savoir commun, si nous voulons ensemble construire ou vivre notre propre relation avec le monde vibratoire.
 la concurrence et la competition est contre productive, car elle consiste la plupart du temps à disqualifier ou à décrédibiliser le ou les adversaires, si bien que toute hégémonie -- monopole -- dans ce contexte tend inévitablement vers le totalitarisme.
 
-Toutes confrontations avec un système gérant des masses et non des individu\endnote{Bien que les société de masse peuvent dans certains cas privilégié l'individualité, c'est uniquement dans le but de diviser pour mieux régner, et en aucun cas de permettre ou de promouvoir l'émergence de mouvements alternatifs dans un but d'émancipation et la réalisation de soi.} restent stérile car antinomique.
+Toutes confrontations avec un système gérant des masses et non des individu\endnote{Bien que les société de masse peuvent dans certains cas privilégié l'individualité, c'est uniquement dans le but de diviser pour mieux régner, et en aucun cas de permettre ou de promouvoir l'émergence de mouvements alternatifs dans un but d'émancipation, ou la réalisation de soi.} restent stérile car antinomique.
 
 fluxus derive totalitaire et commerciale qui a tue le mvt....
 
@@ -712,6 +749,10 @@ Comment ressentons-nous l’intention musicale ? L’affect est bien souvent le 
 Cela reste dans tout les cas une démarche purement philosophique pour laquelle il convient de rester humble. Penser la musique autrement est prospecter au delà du pays fertile, en quête d’un savoir insaisissable avec lequel je vous invite à composer.
 
 Bien que le concept d'œuvre ouverte peut inclure tous les concepts musicaux précédemment évoqués à différents niveaux, le changement de paradigme s'opère sur notre compréhension du monde sonore en musique, par notre expérience de vie en conscience.
+
+\bigskip
+
+C’est autant de pistes qui nous appartient de suivre selon la situation, de nous en inspirer selon notre humeur, et d’explorer au delà des sentier battu ce que le monde sonore peut nous offrir pour notre plus grand plaisir. 
 
 \newpage
   
